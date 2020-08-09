@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
+# Copyright (C) 2018 Robert Griesel
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
+import sys
+import gettext
+
+from pieces.workspace.workspace import Workspace
+import pieces.workspace.workspace_viewgtk as view
+import pieces.helpers.helpers as helpers
+import pieces.storage.storage_markdown as storage_markdown
+from pieces.app.service_locator import ServiceLocator
+from pieces.dialogs.dialog_locator import DialogLocator
+
+
+class MainApplicationController(Gtk.Application):
+
+    def __init__(self):
+        Gtk.Application.__init__(self, application_id='org.cvfosammmm.Pieces')
+
+    def do_activate(self):
+        ''' Everything starts here. '''
+        
+        # setup gettext
+        gettext.install('pieces', localedir='@localedir_path@')
+
+        # get settings
+        settings = ServiceLocator.get_settings()
+
+        # init static variables
+        ServiceLocator.init_pieces_version('@pieces_version@')
+        ServiceLocator.init_resources_path('@resources_path@')
+        ServiceLocator.init_app_icons_path('@app_icons_path@')
+
+        # init main window, model, dialogs
+        self.main_window = view.MainWindow(self, settings)
+        ServiceLocator.init_main_window(self.main_window)
+
+        self.workspace = Workspace()
+        DialogLocator.init_dialogs(self.main_window, self.workspace)
+
+        # populate workspace
+        self.storage = storage_markdown.StorageMarkdown(self.workspace)
+        self.storage.populate_todolists()
+        self.storage.init_writer()
+
+        # init view
+        if settings.get_value('window_state', 'is_maximized'):
+            self.main_window.maximize()
+        else: 
+            self.main_window.unmaximize()
+        self.main_window.set_default_size(settings.get_value('window_state', 'width'), 
+                                          settings.get_value('window_state', 'height'))
+        self.main_window.current_width = settings.get_value('window_state', 'width')
+        self.main_window.current_height = settings.get_value('window_state', 'height')
+        self.fg_color = helpers.theme_color_to_rgba(self.main_window.get_style_context(), 'theme_fg_color')
+        self.bg_color = helpers.theme_color_to_rgba(self.main_window.get_style_context(), 'theme_bg_color')
+        self.style_context = self.main_window.get_style_context()
+        self.first_window_state_event = True
+        self.main_window.show_all()
+        self.observe_main_window()
+
+        # init controller
+        self.workspace.init_workspace_controller()
+        self.main_window.quit_action.connect('activate', self.on_quit_action)
+
+    def do_startup(self):
+        Gtk.Application.do_startup(self)
+
+    def observe_main_window(self):
+        self.main_window.connect('size-allocate', self.on_window_size_allocate)
+        self.main_window.connect('notify::is-maximized', self.on_window_maximize_event)
+        self.main_window.connect('delete-event', self.on_window_close)
+        self.main_window.connect('draw', self.on_window_draw)
+    
+    def on_window_size_allocate(self, main_window, window_size):
+        ''' signal handler, update window size variables '''
+
+        if not main_window.ismaximized:
+            main_window.current_width, main_window.current_height = main_window.get_size()
+
+    def on_window_maximize_event(self, main_window, state_event):
+        ''' signal handler, update window state variables '''
+
+        main_window.ismaximized = main_window.is_maximized()
+        return False
+    
+    def on_window_draw(self, main_window, context):
+        ''' check for theme changes, update sidebar, textviews '''
+
+        fg_color = helpers.theme_color_to_rgba(self.style_context, 'theme_fg_color')
+        bg_color = helpers.theme_color_to_rgba(self.style_context, 'theme_bg_color')
+        if self.fg_color.red != fg_color.red or self.bg_color.red != bg_color.red:
+            self.fg_color = fg_color
+            self.bg_color = bg_color
+            
+            try: documents = self.workspace.open_documents
+            except AttributeError: pass
+            else:
+                is_dark_mode = helpers.is_dark_mode(main_window)
+                for document in documents:
+                    document.set_dark_mode(is_dark_mode)
+        return False
+
+    def save_window_state(self):
+        settings = ServiceLocator.get_settings()
+        main_window = self.main_window
+        settings.set_value('window_state', 'width', main_window.current_width)
+        settings.set_value('window_state', 'height', main_window.current_height)
+        settings.set_value('window_state', 'is_maximized', main_window.ismaximized)
+        settings.set_value('window_state', 'sidebar_paned_position', self.workspace.sidebar_position)
+        settings.pickle()
+
+    def on_window_close(self, window=None, parameter=None):
+        self.save_quit()
+        return True
+
+    def on_quit_action(self, action=None, parameter=None):
+        self.save_quit()
+
+    def save_quit(self):
+        self.save_window_state()
+        self.quit()
+
+
+main_controller = MainApplicationController()
+exit_status = main_controller.run(sys.argv)
+sys.exit(exit_status)

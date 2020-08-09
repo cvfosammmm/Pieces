@@ -1,0 +1,3 @@
+pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py
+pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py
+pieces/workspace/headerbar/headerbar_viewgtk.py

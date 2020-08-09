@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>org.cvfosammmm.Pieces</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-3.0+</project_license>
+	<content_rating type="oars-1.1" />
+	<name>Pieces</name>
+	<summary>ToDo list manager</summary>
+    <developer_name>Cvfosammmm</developer_name>
+
+	<description>
+		<p>Manage ToDo lists.</p>
+	</description>
+
+	<launchable type="desktop-id">org.cvfosammmm.Pieces.desktop</launchable>
+
+	<url type="homepage">https://www.cvfosammmm.org/pieces/</url>
+	<url type="bugtracker">https://github.com/cvfosammmm/Pieces/issues</url>
+	<url type="donation">https://www.patreon.com/cvfosammmm</url>
+
+	<provides>
+		<id>org.cvfosammmm.Pieces.desktop</id>
+	</provides>
+
+    <releases>
+        ​<release version="0.0.1" date="2020-8-9">
+            <description>
+                <p>Initial release</p>
+            </description>
+        </release>
+    </releases>
+</component>
