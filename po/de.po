@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pieces\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-10 10:25+0200\n"
-"PO-Revision-Date: 2020-08-10 10:39+0200\n"
+"PO-Revision-Date: 2020-08-10 12:13+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -20,14 +20,14 @@ msgstr ""
 
 #: pieces/dialogs/about/about.py:44
 msgid "Pieces is a ToDo list manager."
-msgstr ""
+msgstr "Pieces verwaltet To-do-Listen."
 
 #: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:47
 #, python-brace-format
 msgid "Deleting »{title}« with {number_of_items_todo} open task."
 msgid_plural "Deleting »{title}« with {number_of_items_todo} open tasks."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Lösche »{title}« mit {number_of_items_todo} offenen Aufgabe."
+msgstr[1] "Lösche »{title}« mit {number_of_items_todo} offenen Aufgaben."
 
 #: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:49
 msgid "Do you really want to do this?"
@@ -79,15 +79,15 @@ msgstr "Einstellungen"
 
 #: pieces/dialogs/preferences/preferences_viewgtk.py:53
 msgid "General"
-msgstr ""
+msgstr "Allgemein"
 
 #: pieces/dialogs/preferences/preferences_viewgtk.py:66
 msgid "Storage"
-msgstr ""
+msgstr "Speichern"
 
 #: pieces/dialogs/preferences/preferences_viewgtk.py:72
 msgid "Data folder:"
-msgstr ""
+msgstr "Verzeichnis:"
 
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:46
 #: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
@@ -104,11 +104,11 @@ msgstr "_Umbenennen"
 
 #: pieces/workspace/entrybar/entrybar_viewgtk.py:34
 msgid "Add a task..."
-msgstr ""
+msgstr "Aufgabe hinzufügen..."
 
 #: pieces/workspace/entrybar/entrybar_viewgtk.py:63
 msgid "Add Item"
-msgstr ""
+msgstr "Hinzufügen"
 
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:69
 msgid "Rename list..."
@@ -161,3 +161,6 @@ msgid ""
 "\n"
 "To make a list, click \"New List\" in the lower left corner."
 msgstr ""
+"Pieces verwaltet To-do-Listen.\n"
+"\n"
+"Um eine Liste zu erstellen, klicken Sie bitte unten links auf \"Neue Liste\"."
