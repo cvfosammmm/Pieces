@@ -1,6 +1,6 @@
 # Pieces
 
-ToDo list manager for the GNU/Linux desktop, written in Python with Gtk.
+Personal task manager for the GNU/Linux desktop, written in Python with Gtk.
 
 Website: <a href="https://www.cvfosammmm.org/pieces/">https://www.cvfosammmm.org/pieces/</a>
 
