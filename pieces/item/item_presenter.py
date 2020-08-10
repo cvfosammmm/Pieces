@@ -39,12 +39,4 @@ class ItemPresenter(object):
             self.view_todo.text_entry.set_text(parameter)
             self.view_done.text_label.set_text(parameter)
 
-        '''if change_code == 'is_done_changed':
-            if parameter == True:
-                self.view_todo.set_reveal_child(False)
-                self.view_done.set_reveal_child(True)
-            else:
-                self.view_todo.set_reveal_child(True)
-                self.view_done.set_reveal_child(False)'''
-
 
