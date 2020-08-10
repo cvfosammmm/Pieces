@@ -66,7 +66,7 @@ class HeaderBarRight(Gtk.HeaderBar):
 
         box = Gtk.VBox()
         self.pmb.set_box_margin(box)
-        self.pmb.add_action_button(box, _('Rename list...'), 'win.rename-todolist')
+        self.pmb.add_action_button(box, _('Rename list...'), 'win.rename-todolist', keyboard_shortcut='F2')
         self.pmb.add_action_button(box, _('Delete list...'), 'win.delete-todolist')
         self.pmb.add_separator(box)
         self.pmb.add_menu_button(box, _('View'), 'view')
@@ -76,7 +76,7 @@ class HeaderBarRight(Gtk.HeaderBar):
         self.pmb.add_action_button(box, _('Keyboard Shortcuts'), 'win.show-shortcuts-window')
         self.pmb.add_action_button(box, _('About'), 'win.show-about-dialog')
         self.pmb.add_separator(box)
-        self.pmb.add_action_button(box, _('Quit'), 'win.quit', keyboard_shortcut='Ctrl+Q')
+        self.pmb.add_action_button(box, _('Quit'), 'win.quit', keyboard_shortcut=_('Ctrl') + '+Q')
         stack.add_named(box, 'main')
         box.show_all()
 

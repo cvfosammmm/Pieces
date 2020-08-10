@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pieces\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 10:25+0200\n"
-"PO-Revision-Date: 2020-08-10 12:13+0200\n"
+"POT-Creation-Date: 2020-08-10 12:47+0200\n"
+"PO-Revision-Date: 2020-08-10 12:47+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -135,6 +135,10 @@ msgstr "Info"
 msgid "Quit"
 msgstr "Beenden"
 
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:79
+msgid "Ctrl"
+msgstr "Strg"
+
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:87
 msgid "Dark Mode"
 msgstr "Nachtmodus"
@@ -152,8 +156,8 @@ msgid "New List"
 msgstr "Neue Liste"
 
 #: pieces/workspace/sidebar/sidebar_viewgtk.py:52
-msgid "Add List"
-msgstr "Liste hinzufügen"
+msgid "Create List (Ctrl+N)"
+msgstr "Liste erstellen (Strg+N)"
 
 #: pieces/workspace/welcome_page/welcome_page_viewgtk.py:36
 msgid ""
@@ -164,3 +168,6 @@ msgstr ""
 "Pieces verwaltet To-do-Listen.\n"
 "\n"
 "Um eine Liste zu erstellen, klicken Sie bitte unten links auf \"Neue Liste\"."
+
+#~ msgid "Add List"
+#~ msgstr "Liste erstellen"
