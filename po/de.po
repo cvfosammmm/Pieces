@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pieces\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 14:14+0200\n"
-"PO-Revision-Date: 2020-08-10 14:14+0200\n"
+"POT-Creation-Date: 2020-08-10 14:25+0200\n"
+"PO-Revision-Date: 2020-08-10 14:24+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -19,8 +19,8 @@ msgstr ""
 "X-Generator: Gtranslator 3.30.1\n"
 
 #: pieces/dialogs/about/about.py:44
-msgid "Pieces is a ToDo list manager."
-msgstr "Pieces verwaltet To-do-Listen."
+msgid "Pieces is a personal task manager."
+msgstr "Pieces ist ein Aufgabenverwaltungssystem."
 
 #: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:47
 #, python-brace-format
@@ -91,8 +91,9 @@ msgid "Data folder:"
 msgstr "Verzeichnis:"
 
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:46
-msgid "List Name"
-msgstr "Name der Liste"
+#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
+msgid "Project Name"
+msgstr "Name des Projekts"
 
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:63
 msgid "Rename Project"
@@ -143,10 +144,6 @@ msgstr "Strg"
 msgid "Dark Mode"
 msgstr "Nachtmodus"
 
-#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
-msgid "Project Name"
-msgstr "Name des Projekts"
-
 #: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:44
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -165,14 +162,20 @@ msgstr "Projekt erstellen (Strg+N)"
 
 #: pieces/workspace/welcome_page/welcome_page_viewgtk.py:36
 msgid ""
-"Pieces is a todolist manager.\n"
+"Pieces is a personal task manager.\n"
 "\n"
-"To make a list, click \"New Project\" in the lower left corner."
+"To make a project, click \"New Project\" in the lower left corner."
 msgstr ""
-"Pieces verwaltet To-do-Listen.\n"
+"Pieces ist ein Aufgabenverwaltungssystem.\n"
 "\n"
-"Um eine Liste zu erstellen, klicken Sie bitte unten links auf \"Neues Projekt"
-"\"."
+"Um ein Projekt zu erstellen, klicken Sie bitte unten links auf \"Neues "
+"Projekt\"."
+
+#~ msgid "New Project Name"
+#~ msgstr "Name des Projekts"
+
+#~ msgid "List Name"
+#~ msgstr "Name der Liste"
 
 #~ msgid "Lists"
 #~ msgstr "Listen"

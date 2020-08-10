@@ -41,7 +41,7 @@ class AboutDialog(Dialog):
         self.view.set_program_name('Pieces')
         self.view.set_version(ServiceLocator.get_pieces_version())
         self.view.set_copyright('Copyright © 2018-2020')
-        self.view.set_comments(_('Pieces is a ToDo list manager.'))
+        self.view.set_comments(_('Pieces is a personal task manager.'))
         self.view.set_license_type(Gtk.License.GPL_3_0)
         self.view.set_website('https://www.cvfosammmm.org/pieces/')
         self.view.set_website_label('https://www.cvfosammmm.org/pieces/')

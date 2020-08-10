@@ -43,7 +43,7 @@ class RenameTodolistDialogView(object):
         self.content.set_margin_left(18)
         self.content.set_margin_right(18)
 
-        label = Gtk.Label(_('List Name'))
+        label = Gtk.Label(_('Project Name'))
         label.set_xalign(0)
         label.set_margin_bottom(6)
         label.set_margin_top(18)

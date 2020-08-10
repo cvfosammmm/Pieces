@@ -33,7 +33,7 @@ class WelcomePageView(Gtk.ScrolledWindow):
         self.viewport = self.get_children().pop()
         
         self.welcome_message = Gtk.Label()
-        self.welcome_message.set_text(_('Pieces is a todolist manager.\n\nTo make a list, click "New Project" in the lower left corner.'))
+        self.welcome_message.set_text(_('Pieces is a personal task manager.\n\nTo make a project, click "New Project" in the lower left corner.'))
         self.welcome_message.set_justify(Gtk.Justification.CENTER)
         self.welcome_message.set_size_request(400, 50)
         
