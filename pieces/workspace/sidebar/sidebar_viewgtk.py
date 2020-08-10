@@ -36,6 +36,11 @@ class Sidebar(Gtk.VBox):
         self.list_fixed.set_can_focus(False)
         self.vbox.pack_start(self.list_fixed, False, False, 0)
 
+        label = Gtk.Label(_('Projects'))
+        label.get_style_context().add_class('sidebar-headline')
+        label.set_xalign(0)
+        self.pack_start(label, False, False, 0)
+
         self.list_custom = Gtk.ListBox()
         self.list_custom.set_can_focus(False)
         self.vbox.pack_start(self.list_custom, True, True, 0)

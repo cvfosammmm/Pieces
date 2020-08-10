@@ -106,6 +106,19 @@ label.placeholder-text {
     color: mix(@theme_fg_color, @theme_bg_color, 0.4);
 }
 
+/* sidebar */
+
+label.sidebar-headline {
+    font-weight: bold;
+    font-size: 13px;
+    color: mix(@theme_fg_color, @theme_bg_color, 0.4);
+    border-bottom: 1px solid mix(@borders, @theme_bg_color, 0.4);
+    padding-top: 9px;
+    padding-bottom: 3px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
 /* popovers */
 
 label.popover-dialog-header {
