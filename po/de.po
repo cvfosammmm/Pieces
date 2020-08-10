@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pieces\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-18 12:22+0200\n"
-"PO-Revision-Date: 2020-08-09 17:29+0200\n"
+"POT-Creation-Date: 2020-08-10 10:25+0200\n"
+"PO-Revision-Date: 2020-08-10 10:25+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -18,9 +18,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 3.30.1\n"
 
-#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:63
-msgid "Rename List"
-msgstr "Liste umbenennen"
+#: pieces/dialogs/about/about.py:44
+msgid "Pieces is a ToDo list manager."
+msgstr ""
+
+#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:47
+#, python-brace-format
+msgid "Deleting »{title}« with {number_of_items_todo} open task."
+msgid_plural "Deleting »{title}« with {number_of_items_todo} open tasks."
+msgstr[0] ""
+msgstr[1] ""
+
+#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:49
+msgid "Do you really want to do this?"
+msgstr ""
+
+#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:51
+#: pieces/dialogs/preferences/preferences.py:46
+#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:65
+msgid "_Cancel"
+msgstr ""
+
+#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:52
+msgid "_Yes, delete this list"
+msgstr ""
 
 #: pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py:34
 msgid "Lists"
@@ -42,35 +63,104 @@ msgstr "Fenster und Leisten"
 msgid "Close Application"
 msgstr "Anwendung beenden"
 
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:73
-msgid "Rename list..."
-msgstr "Liste umbenennen..."
+#: pieces/dialogs/preferences/preferences.py:46
+#: pieces/dialogs/preferences/preferences.py:52
+msgid "_Select"
+msgstr ""
 
+#: pieces/dialogs/preferences/preferences.py:47
+msgid "Select Folder"
+msgstr ""
+
+#: pieces/dialogs/preferences/preferences_viewgtk.py:41
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:74
-msgid "Delete list..."
-msgstr "Liste löschen..."
-
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:76
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:90
-msgid "View"
-msgstr "Ansicht"
-
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:78
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:80
+#: pieces/dialogs/preferences/preferences_viewgtk.py:53
+msgid "General"
+msgstr ""
+
+#: pieces/dialogs/preferences/preferences_viewgtk.py:66
+msgid "Storage"
+msgstr ""
+
+#: pieces/dialogs/preferences/preferences_viewgtk.py:72
+msgid "Data folder:"
+msgstr ""
+
+#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:46
+#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
+msgid "List Name"
+msgstr ""
+
+#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:63
+msgid "Rename List"
+msgstr "Liste umbenennen"
+
+#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:68
+msgid "_Rename"
+msgstr "_Umbenennen"
+
+#: pieces/workspace/entrybar/entrybar_viewgtk.py:34
+msgid "Add a task..."
+msgstr ""
+
+#: pieces/workspace/entrybar/entrybar_viewgtk.py:63
+msgid "Add Item"
+msgstr ""
+
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:69
+msgid "Rename list..."
+msgstr "Liste umbenennen..."
+
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:70
+msgid "Delete list..."
+msgstr "Liste löschen..."
+
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:72
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:86
+msgid "View"
+msgstr "Ansicht"
+
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:76
 msgid "Keyboard Shortcuts"
 msgstr "Tastenkürzel"
 
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:81
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:77
 msgid "About"
 msgstr "Info"
 
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:83
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:79
 msgid "Quit"
 msgstr "Beenden"
 
-#: pieces/workspace/headerbar/headerbar_viewgtk.py:91
+#: pieces/workspace/headerbar/headerbar_viewgtk.py:87
 msgid "Dark Mode"
 msgstr "Nachtmodus"
+
+#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:44
+msgid "Cancel"
+msgstr ""
+
+#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:46
+#, fuzzy
+msgid "Create List"
+msgstr "Neue Liste erstellen"
+
+#: pieces/workspace/sidebar/sidebar_viewgtk.py:50
+#, fuzzy
+msgid "New List"
+msgstr "Liste umbenennen"
+
+#: pieces/workspace/sidebar/sidebar_viewgtk.py:52
+#, fuzzy
+msgid "Add List"
+msgstr "Listen"
+
+#: pieces/workspace/welcome_page/welcome_page_viewgtk.py:36
+msgid ""
+"Pieces is a todolist manager.\n"
+"\n"
+"To make a list, click \"New List\" in the lower left corner."
+msgstr ""

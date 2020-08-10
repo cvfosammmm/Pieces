@@ -43,7 +43,7 @@ class RenameTodolistDialogView(object):
         self.content.set_margin_left(18)
         self.content.set_margin_right(18)
 
-        label = Gtk.Label('List Name')
+        label = Gtk.Label(_('List Name'))
         label.set_xalign(0)
         label.set_margin_bottom(6)
         label.set_margin_top(18)
@@ -62,10 +62,10 @@ class RenameTodolistDialogView(object):
         self.headerbar.set_show_close_button(False)
         self.headerbar.set_title(_('Rename List'))
 
-        self.cancel_button = self.dialog.add_button('_Cancel', Gtk.ResponseType.CANCEL)
+        self.cancel_button = self.dialog.add_button(_('_Cancel'), Gtk.ResponseType.CANCEL)
         self.cancel_button.set_can_focus(False)
         
-        self.rename_button = self.dialog.add_button('_Rename', Gtk.ResponseType.APPLY)
+        self.rename_button = self.dialog.add_button(_('_Rename'), Gtk.ResponseType.APPLY)
         self.rename_button.set_can_focus(False)
         self.rename_button.get_style_context().add_class('suggested-action')
         

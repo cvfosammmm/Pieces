@@ -39,7 +39,7 @@ class MainApplicationController(Gtk.Application):
         ''' Everything starts here. '''
         
         # setup gettext
-        gettext.install('pieces', localedir='@localedir_path@')
+        gettext.install('pieces', names=('ngettext',), localedir='@localedir_path@')
 
         # get settings
         settings = ServiceLocator.get_settings()

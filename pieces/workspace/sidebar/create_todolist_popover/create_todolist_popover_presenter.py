@@ -34,3 +34,4 @@ class CreateTodolistPopoverPresenter(object):
         if change_code == 'validation_state_changed':
             self.view.submit_button.set_sensitive(parameter)
 
+

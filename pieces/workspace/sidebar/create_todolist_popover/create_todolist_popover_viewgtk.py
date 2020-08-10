@@ -31,7 +31,7 @@ class CreateTodolistPopoverView(Gtk.Popover):
         self.box.set_margin_top(18)
         self.box.set_margin_bottom(18)
 
-        self.header = Gtk.Label('List Name')
+        self.header = Gtk.Label(_('List Name'))
         self.header.set_xalign(0)
         self.header.set_margin_bottom(6)
         self.header.get_style_context().add_class('popover-dialog-header')
@@ -41,9 +41,9 @@ class CreateTodolistPopoverView(Gtk.Popover):
         self.title_entry.set_size_request(300, -1)
 
         self.button_box = Gtk.HBox()
-        self.cancel_button = Gtk.Button.new_with_label('Cancel')
+        self.cancel_button = Gtk.Button.new_with_label(_('Cancel'))
         self.cancel_button.set_size_request(132, -1)
-        self.submit_button = Gtk.Button.new_with_label('Create List')
+        self.submit_button = Gtk.Button.new_with_label(_('Create List'))
         self.submit_button.set_margin_left(12)
         self.submit_button.set_size_request(156, -1)
         self.submit_button.get_style_context().add_class('suggested-action')

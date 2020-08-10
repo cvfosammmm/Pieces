@@ -38,7 +38,7 @@ class Preferences(object):
         self.dialog.set_default_size(400, 250)
         
         self.headerbar = self.dialog.get_header_bar()
-        self.headerbar.set_title('Preferences')
+        self.headerbar.set_title(_('Preferences'))
 
         self.topbox = self.dialog.get_content_area()
         self.topbox.set_border_width(0)
@@ -69,7 +69,7 @@ class Preferences(object):
         self.page_general.pack_start(label, False, False, 0)
 
         box = Gtk.HBox()
-        label = Gtk.Label('Data folder:')
+        label = Gtk.Label(_('Data folder:'))
         label.set_xalign(0)
         label.set_margin_right(12)
         box.pack_start(label, False, False, 0)

@@ -43,13 +43,13 @@ class PreferencesDialog(Dialog):
 
     def on_data_folder_chooser_clicked(self, button):
         action = Gtk.FileChooserAction.SELECT_FOLDER
-        buttons = ('_Cancel', Gtk.ResponseType.CANCEL, '_Select', Gtk.ResponseType.APPLY)
-        dialog = Gtk.FileChooserDialog('Select Folder', self.main_window, action, buttons)
+        buttons = (_('_Cancel'), Gtk.ResponseType.CANCEL, _('_Select'), Gtk.ResponseType.APPLY)
+        dialog = Gtk.FileChooserDialog(_('Select Folder'), self.main_window, action, buttons)
 
         dialog.set_do_overwrite_confirmation(True)
 
         for widget in dialog.get_header_bar().get_children():
-            if isinstance(widget, Gtk.Button) and widget.get_label() == '_Select':
+            if isinstance(widget, Gtk.Button) and widget.get_label() == _('_Select'):
                 widget.get_style_context().add_class(Gtk.STYLE_CLASS_SUGGESTED_ACTION)
                 widget.set_can_default(True)
                 widget.grab_default()

@@ -44,6 +44,7 @@ class Todolist(Observable):
         for item in self.items_todo + self.items_done: item.register_observer(self)
 
         self.view = todolist_view.TodolistView()
+        self.controller = todolist_controller.TodolistController(self, self.view)
         self.presenter = todolist_presenter.TodolistPresenter(self, self.view)
         self.sidebar_entry = sidebar_entry.SidebarEntry(self)
         self.entrybar_selection_entry = entrybar_selection_entry.EntrybarSelectionEntry(self)

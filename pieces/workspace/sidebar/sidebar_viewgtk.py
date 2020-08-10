@@ -47,9 +47,9 @@ class Sidebar(Gtk.VBox):
 
         self.action_bar = Gtk.ActionBar()
         self.create_list_button = Gtk.MenuButton()
-        self.create_list_button.set_label('New List')
+        self.create_list_button.set_label(_('New List'))
         self.create_list_button.set_popover(self.create_todolist_popover)
-        self.create_list_button.set_tooltip_text('Add List')
+        self.create_list_button.set_tooltip_text(_('Add List'))
         self.create_list_button.set_can_focus(False)
         self.action_bar.pack_start(self.create_list_button)
 

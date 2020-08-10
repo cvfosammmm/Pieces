@@ -44,11 +44,12 @@ class DeleteTodolistConfirmationDialog(Dialog):
         no_items = todolist.get_number_of_items()
         no_items_done = todolist.get_number_of_items_done()
         no_items_todo = no_items - no_items_done
-        self.view.set_property('text', 'Deleting »{title}« with {number_of_items_todo} open tasks.'.format(title=todolist.get_title(), number_of_items_todo=no_items_todo))
-        self.view.format_secondary_markup('Do you really want to do this?')
+        dialog_title = ngettext('Deleting »{title}« with {number_of_items_todo} open task.', 'Deleting »{title}« with {number_of_items_todo} open tasks.', no_items_todo)
+        self.view.set_property('text', dialog_title.format(title=todolist.get_title(), number_of_items_todo=no_items_todo))
+        self.view.format_secondary_markup(_('Do you really want to do this?'))
 
-        self.view.add_buttons('_Cancel', Gtk.ResponseType.CANCEL)
-        delete_button = self.view.add_button('_Yes, delete this list', Gtk.ResponseType.YES)
+        self.view.add_buttons(_('_Cancel'), Gtk.ResponseType.CANCEL)
+        delete_button = self.view.add_button(_('_Yes, delete this list'), Gtk.ResponseType.YES)
         delete_button.get_style_context().add_class('destructive-action')
         self.view.set_default_response(Gtk.ResponseType.CANCEL)
 

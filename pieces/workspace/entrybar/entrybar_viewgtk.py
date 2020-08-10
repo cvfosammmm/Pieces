@@ -31,7 +31,7 @@ class EntrybarView(Gtk.HBox):
 
         self.text_entry = Gtk.Entry()
 
-        self.overlay_text = Gtk.Label('Add a task...')
+        self.overlay_text = Gtk.Label(_('Add a task...'))
         self.overlay_text.set_xalign(0)
         self.overlay_text.get_style_context().add_class('placeholder-text')
         self.overlay_text.set_margin_left(9)
@@ -60,7 +60,7 @@ class EntrybarView(Gtk.HBox):
         box.set_margin_right(6)
 
         self.submit_button = Gtk.Button.new_from_icon_name('keyboard-enter-symbolic', Gtk.IconSize.BUTTON)
-        self.submit_button.set_tooltip_text('Add Item')
+        self.submit_button.set_tooltip_text(_('Add Item'))
         self.submit_button.set_can_focus(False)
 
         self.pack_start(box, True, True, 0)
