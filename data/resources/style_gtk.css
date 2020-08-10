@@ -112,11 +112,24 @@ label.sidebar-headline {
     font-weight: bold;
     font-size: 13px;
     color: mix(@theme_fg_color, @theme_bg_color, 0.4);
-    border-bottom: 1px solid mix(@borders, @theme_bg_color, 0.4);
-    padding-top: 9px;
-    padding-bottom: 3px;
-    margin-left: 12px;
-    margin-right: 12px;
+    border-bottom: 1px solid mix(@borders, @theme_bg_color, 0.5);
+    padding-top: 13px;
+    padding-bottom: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 9px;
+    margin-right: 9px;
+}
+row.sidebar-entry {
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+row.sidebar-entry:not(:selected) label.todo-number {
+    color: mix(@theme_fg_color, @theme_bg_color, 0.4);
+}
+row.sidebar-entry:selected {
 }
 
 /* popovers */

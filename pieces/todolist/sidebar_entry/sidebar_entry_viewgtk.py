@@ -25,6 +25,7 @@ class SidebarEntryView(Gtk.ListBoxRow):
 
     def __init__(self, todolist):
         Gtk.ListBoxRow.__init__(self)
+        self.get_style_context().add_class('sidebar-entry')
         self.set_can_focus(False)
 
         self.todolist = todolist
@@ -36,6 +37,7 @@ class SidebarEntryView(Gtk.ListBoxRow):
         self.title_label.set_ellipsize(Pango.EllipsizeMode.END)
 
         self.todo_number_label = Gtk.Label()
+        self.todo_number_label.get_style_context().add_class('todo-number')
 
         self.hbox.pack_start(self.title_label, True, True, 0)
         self.hbox.pack_end(self.todo_number_label, False, False, 0)
