@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pieces\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-10 10:25+0200\n"
-"PO-Revision-Date: 2020-08-10 10:25+0200\n"
+"PO-Revision-Date: 2020-08-10 10:39+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -31,17 +31,17 @@ msgstr[1] ""
 
 #: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:49
 msgid "Do you really want to do this?"
-msgstr ""
+msgstr "Wollen Sie das wirklich tun?"
 
 #: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:51
 #: pieces/dialogs/preferences/preferences.py:46
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:65
 msgid "_Cancel"
-msgstr ""
+msgstr "_Abbrechen"
 
 #: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:52
 msgid "_Yes, delete this list"
-msgstr ""
+msgstr "_Ja, Liste löschen"
 
 #: pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py:34
 msgid "Lists"
@@ -66,11 +66,11 @@ msgstr "Anwendung beenden"
 #: pieces/dialogs/preferences/preferences.py:46
 #: pieces/dialogs/preferences/preferences.py:52
 msgid "_Select"
-msgstr ""
+msgstr "_Auswählen"
 
 #: pieces/dialogs/preferences/preferences.py:47
 msgid "Select Folder"
-msgstr ""
+msgstr "Verzeichnis auswählen"
 
 #: pieces/dialogs/preferences/preferences_viewgtk.py:41
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:74
@@ -92,7 +92,7 @@ msgstr ""
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:46
 #: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
 msgid "List Name"
-msgstr ""
+msgstr "Name der Liste"
 
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:63
 msgid "Rename List"
@@ -141,22 +141,19 @@ msgstr "Nachtmodus"
 
 #: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:44
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:46
-#, fuzzy
 msgid "Create List"
-msgstr "Neue Liste erstellen"
+msgstr "Liste erstellen"
 
 #: pieces/workspace/sidebar/sidebar_viewgtk.py:50
-#, fuzzy
 msgid "New List"
-msgstr "Liste umbenennen"
+msgstr "Neue Liste"
 
 #: pieces/workspace/sidebar/sidebar_viewgtk.py:52
-#, fuzzy
 msgid "Add List"
-msgstr "Listen"
+msgstr "Liste hinzufügen"
 
 #: pieces/workspace/welcome_page/welcome_page_viewgtk.py:36
 msgid ""
