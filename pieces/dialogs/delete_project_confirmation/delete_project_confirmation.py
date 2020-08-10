@@ -44,8 +44,11 @@ class DeleteProjectConfirmationDialog(Dialog):
         no_items = todolist.get_number_of_items()
         no_items_done = todolist.get_number_of_items_done()
         no_items_todo = no_items - no_items_done
-        dialog_title = ngettext('Deleting »{title}« with {number_of_items_todo} open task.', 'Deleting »{title}« with {number_of_items_todo} open tasks.', no_items_todo)
-        self.view.set_property('text', dialog_title.format(title=todolist.get_title(), number_of_items_todo=no_items_todo))
+        if no_items_todo == 1:
+            dialog_title = _('Deleting »{title}« with one open task.').format(title=todolist.get_title())
+        else:
+            dialog_title = _('Deleting »{title}« with {number_of_items_todo} open tasks.').format(title=todolist.get_title(), number_of_items_todo=no_items_todo)
+        self.view.set_property('text', dialog_title)
         self.view.format_secondary_markup(_('Do you really want to do this?'))
 
         self.view.add_buttons(_('_Cancel'), Gtk.ResponseType.CANCEL)

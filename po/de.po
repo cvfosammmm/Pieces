@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pieces\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 14:25+0200\n"
-"PO-Revision-Date: 2020-08-10 14:24+0200\n"
+"POT-Creation-Date: 2020-08-10 16:30+0200\n"
+"PO-Revision-Date: 2020-08-10 16:31+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -22,24 +22,27 @@ msgstr ""
 msgid "Pieces is a personal task manager."
 msgstr "Pieces ist ein Aufgabenverwaltungssystem."
 
-#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:47
+#: pieces/dialogs/delete_project_confirmation/delete_project_confirmation.py:48
 #, python-brace-format
-msgid "Deleting »{title}« with {number_of_items_todo} open task."
-msgid_plural "Deleting »{title}« with {number_of_items_todo} open tasks."
-msgstr[0] "Lösche »{title}« mit {number_of_items_todo} offenen Aufgabe."
-msgstr[1] "Lösche »{title}« mit {number_of_items_todo} offenen Aufgaben."
+msgid "Deleting »{title}« with one open task."
+msgstr "Lösche »{title}« mit einer offenen Aufgabe."
 
-#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:49
+#: pieces/dialogs/delete_project_confirmation/delete_project_confirmation.py:50
+#, python-brace-format
+msgid "Deleting »{title}« with {number_of_items_todo} open tasks."
+msgstr "Lösche »{title}« mit {number_of_items_todo} offenen Aufgaben."
+
+#: pieces/dialogs/delete_project_confirmation/delete_project_confirmation.py:52
 msgid "Do you really want to do this?"
 msgstr "Wollen Sie das wirklich tun?"
 
-#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:51
+#: pieces/dialogs/delete_project_confirmation/delete_project_confirmation.py:54
 #: pieces/dialogs/preferences/preferences.py:46
-#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:65
+#: pieces/dialogs/rename_project/rename_project_viewgtk.py:65
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:52
+#: pieces/dialogs/delete_project_confirmation/delete_project_confirmation.py:55
 msgid "_Yes, delete this project"
 msgstr "_Ja, Projekt löschen"
 
@@ -90,16 +93,16 @@ msgstr "Speichern"
 msgid "Data folder:"
 msgstr "Verzeichnis:"
 
-#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:46
-#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
+#: pieces/dialogs/rename_project/rename_project_viewgtk.py:46
+#: pieces/workspace/sidebar/create_project_popover/create_project_popover_viewgtk.py:34
 msgid "Project Name"
 msgstr "Name des Projekts"
 
-#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:63
+#: pieces/dialogs/rename_project/rename_project_viewgtk.py:63
 msgid "Rename Project"
 msgstr "Projekt umbenennen"
 
-#: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:68
+#: pieces/dialogs/rename_project/rename_project_viewgtk.py:68
 msgid "_Rename"
 msgstr "_Umbenennen"
 
@@ -144,11 +147,11 @@ msgstr "Strg"
 msgid "Dark Mode"
 msgstr "Nachtmodus"
 
-#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:44
+#: pieces/workspace/sidebar/create_project_popover/create_project_popover_viewgtk.py:44
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:46
+#: pieces/workspace/sidebar/create_project_popover/create_project_popover_viewgtk.py:46
 msgid "Create Project"
 msgstr "Projekt erstellen"
 
