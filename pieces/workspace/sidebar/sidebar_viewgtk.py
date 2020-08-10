@@ -19,7 +19,7 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-import pieces.workspace.sidebar.create_todolist_popover.create_todolist_popover_viewgtk as create_todolist_popover_view
+import pieces.workspace.sidebar.create_project_popover.create_project_popover_viewgtk as create_project_popover_view
 
 
 class Sidebar(Gtk.VBox):
@@ -41,19 +41,19 @@ class Sidebar(Gtk.VBox):
         label.set_xalign(0)
         self.pack_start(label, False, False, 0)
 
-        self.list_custom = Gtk.ListBox()
-        self.list_custom.set_can_focus(False)
-        self.vbox.pack_start(self.list_custom, True, True, 0)
+        self.project_list = Gtk.ListBox()
+        self.project_list.set_can_focus(False)
+        self.vbox.pack_start(self.project_list, True, True, 0)
 
         self.scrolled_window = Gtk.ScrolledWindow()
         self.scrolled_window.add(self.vbox)
 
-        self.create_todolist_popover = create_todolist_popover_view.CreateTodolistPopoverView()
+        self.create_project_popover = create_project_popover_view.CreateProjectPopoverView()
 
         self.action_bar = Gtk.ActionBar()
         self.create_list_button = Gtk.MenuButton()
         self.create_list_button.set_label(_('New Project'))
-        self.create_list_button.set_popover(self.create_todolist_popover)
+        self.create_list_button.set_popover(self.create_project_popover)
         self.create_list_button.set_tooltip_text(_('Create Project (Ctrl+N)'))
         self.create_list_button.set_can_focus(False)
         self.action_bar.pack_start(self.create_list_button)

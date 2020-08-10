@@ -21,7 +21,7 @@ from gi.repository import Gtk, GLib
 from gi.repository import Gdk
 
 
-class RenameTodolistDialogView(object):
+class RenameProjectDialogView(object):
 
     def __init__(self, main_window):
         builder = Gtk.Builder.new_from_string('<?xml version="1.0" encoding="UTF-8"?><interface><object class="GtkDialog" id="dialog"><property name="use-header-bar">1</property></object></interface>', -1)

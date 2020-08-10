@@ -18,8 +18,8 @@
 import pieces.dialogs.about.about as about_dialog
 import pieces.dialogs.preferences.preferences as preferences_dialog
 import pieces.dialogs.keyboard_shortcuts.keyboard_shortcuts as keyboard_shortcuts_dialog
-import pieces.dialogs.delete_todolist_confirmation.delete_todolist_confirmation as delete_todolist_confirmation_dialog
-import pieces.dialogs.rename_todolist.rename_todolist as rename_todolist_dialog
+import pieces.dialogs.delete_project_confirmation.delete_project_confirmation as delete_project_confirmation_dialog
+import pieces.dialogs.rename_project.rename_project as rename_project_dialog
 
 
 class DialogLocator(object):
@@ -31,8 +31,8 @@ class DialogLocator(object):
         dialogs['about'] = about_dialog.AboutDialog(main_window)
         dialogs['preferences'] = preferences_dialog.PreferencesDialog(main_window)
         dialogs['keyboard_shortcuts'] = keyboard_shortcuts_dialog.KeyboardShortcutsDialog(main_window)
-        dialogs['delete_todolist_confirmation'] = delete_todolist_confirmation_dialog.DeleteTodolistConfirmationDialog(main_window)
-        dialogs['rename_todolist'] = rename_todolist_dialog.RenameTodolistDialog(main_window)
+        dialogs['delete_project_confirmation'] = delete_project_confirmation_dialog.DeleteProjectConfirmationDialog(main_window)
+        dialogs['rename_project'] = rename_project_dialog.RenameProjectDialog(main_window)
         DialogLocator.dialogs = dialogs
     
     def get_dialog(dialog_type):

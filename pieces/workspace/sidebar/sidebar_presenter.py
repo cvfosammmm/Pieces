@@ -22,18 +22,18 @@ class SidebarPresenter(object):
         self.sidebar = sidebar
         self.view = view
         self.sidebar.register_observer(self)
-        self.view.list_custom.set_sort_func(self.sort_func)
+        self.view.project_list.set_sort_func(self.sort_func)
 
     def change_notification(self, change_code, notifying_object, parameter):
 
         if change_code == 'new_todolist':
-            self.view.list_custom.prepend(parameter.sidebar_entry.view)
+            self.view.project_list.prepend(parameter.sidebar_entry.view)
 
         if change_code == 'todolist_removed':
-            self.view.list_custom.remove(parameter.sidebar_entry.view)
+            self.view.project_list.remove(parameter.sidebar_entry.view)
 
     def select_row_by_todolist(self, todolist):
-        self.view.list_custom.select_row(todolist.sidebar_entry.view)
+        self.view.project_list.select_row(todolist.sidebar_entry.view)
 
     def sort_func(self, row1, row2):
         if row1.todolist.last_modified > row2.todolist.last_modified: return -1

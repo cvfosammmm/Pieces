@@ -21,7 +21,7 @@ from gi.repository import Gio
 
 import pieces.workspace.sidebar.sidebar_controller as sidebar_controller
 import pieces.workspace.sidebar.sidebar_presenter as sidebar_presenter
-import pieces.workspace.sidebar.create_todolist_popover.create_todolist_popover as create_todolist_popover_model
+import pieces.workspace.sidebar.create_project_popover.create_project_popover as create_project_popover_model
 from pieces.helpers.observable import Observable
 from pieces.app.service_locator import ServiceLocator
 
@@ -38,7 +38,7 @@ class Sidebar(Observable):
         self.controller = sidebar_controller.SidebarController(self, self.view)
         self.presenter = sidebar_presenter.SidebarPresenter(self, self.view)
 
-        self.create_todolist_popover = create_todolist_popover_model.CreateTodolistPopover(workspace)
+        self.create_project_popover = create_project_popover_model.CreateProjectPopover(workspace)
 
         self.workspace.register_observer(self)
 

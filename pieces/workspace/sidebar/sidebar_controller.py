@@ -23,12 +23,12 @@ class SidebarController(object):
         self.view = view
 
         self.view.list_fixed.connect('row-selected', self.on_row_selected)
-        self.view.list_custom.connect('row-selected', self.on_row_selected)
+        self.view.project_list.connect('row-selected', self.on_row_selected)
 
     def on_row_selected(self, box, row):
         if row != None:
             if box == self.view.list_fixed:
-                self.view.list_custom.unselect_all()
+                self.view.project_list.unselect_all()
             else:
                 self.view.list_fixed.unselect_all()
             self.sidebar.set_todolist(row.todolist)

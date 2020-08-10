@@ -33,9 +33,9 @@ class WorkspaceController(object):
 
         self.s_allocation = 0
 
-        self.main_window.new_todolist_action.connect('activate', self.on_new_todolist_action_activated)
-        self.main_window.rename_todolist_action.connect('activate', self.on_rename_todolist_action_activated)
-        self.main_window.delete_todolist_action.connect('activate', self.on_delete_todolist_action_activated)
+        self.main_window.new_project_action.connect('activate', self.on_new_project_action_activated)
+        self.main_window.rename_project_action.connect('activate', self.on_rename_project_action_activated)
+        self.main_window.delete_project_action.connect('activate', self.on_delete_project_action_activated)
         self.main_window.shortcuts_window_action.connect('activate', self.show_shortcuts_window)
         self.main_window.show_preferences_action.connect('activate', self.show_preferences_dialog)
         self.main_window.show_about_action.connect('activate', self.show_about_dialog)
@@ -70,16 +70,16 @@ class WorkspaceController(object):
     def show_about_dialog(self, action, parameter=''):
         DialogLocator.get_dialog('about').run()
 
-    def on_new_todolist_action_activated(self, action=None, parameter=''):
+    def on_new_project_action_activated(self, action=None, parameter=''):
         self.main_window.sidebar.create_list_button.clicked()
 
-    def on_rename_todolist_action_activated(self, action=None, parameter=''):
+    def on_rename_project_action_activated(self, action=None, parameter=''):
         todolist = self.workspace.get_active_todolist()
-        DialogLocator.get_dialog('rename_todolist').run(todolist)
+        DialogLocator.get_dialog('rename_project').run(todolist)
 
-    def on_delete_todolist_action_activated(self, action=None, parameter=''):
+    def on_delete_project_action_activated(self, action=None, parameter=''):
         todolist = self.workspace.get_active_todolist()
-        if DialogLocator.get_dialog('delete_todolist_confirmation').run(todolist):
+        if DialogLocator.get_dialog('delete_project_confirmation').run(todolist):
             self.workspace.remove_active_todolist()
 
 

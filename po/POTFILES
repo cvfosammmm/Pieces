@@ -1,11 +1,11 @@
 pieces/dialogs/about/about.py
-pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py
+pieces/dialogs/delete_project_confirmation/delete_project_confirmation.py
 pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py
 pieces/dialogs/preferences/preferences.py
 pieces/dialogs/preferences/preferences_viewgtk.py
-pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py
+pieces/dialogs/rename_project/rename_project_viewgtk.py
 pieces/workspace/entrybar/entrybar_viewgtk.py
 pieces/workspace/headerbar/headerbar_viewgtk.py
-pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py
+pieces/workspace/sidebar/create_project_popover/create_project_popover_viewgtk.py
 pieces/workspace/sidebar/sidebar_viewgtk.py
 pieces/workspace/welcome_page/welcome_page_viewgtk.py

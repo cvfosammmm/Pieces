@@ -24,8 +24,8 @@ class Shortcuts(object):
     def __init__(self):
         self.main_window = ServiceLocator.get_main_window()
 
-        self.main_window.app.set_accels_for_action('win.new-todolist', ['<Control>n'])
-        self.main_window.app.set_accels_for_action('win.rename-todolist', ['F2'])
+        self.main_window.app.set_accels_for_action('win.new-project', ['<Control>n'])
+        self.main_window.app.set_accels_for_action('win.rename-project', ['F2'])
         self.main_window.app.set_accels_for_action('win.quit', ['<Control>q'])
 
 

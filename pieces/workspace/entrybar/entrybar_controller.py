@@ -30,11 +30,11 @@ class EntrybarController(object):
         self.view.text_entry.connect('activate', self.on_text_entry_activate)
         self.view.text_entry.connect('key-press-event', self.on_text_entry_key_press)
         self.view.text_entry.connect('changed', self.on_text_entry_changed)
-        self.view.todolist_popover.list.connect('row-activated', self.on_row_activated)
+        self.view.project_popover.list.connect('row-activated', self.on_row_activated)
 
     def on_row_activated(self, box, row):
         self.entrybar.set_todolist(row.todolist)
-        self.view.todolist_popover.popdown()
+        self.view.project_popover.popdown()
 
     def on_submit_button_clicked(self, button=None):
         if self.entrybar.validation_state == True:

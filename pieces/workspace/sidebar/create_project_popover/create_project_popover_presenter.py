@@ -16,7 +16,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>
 
 
-class CreateTodolistPopoverPresenter(object):
+class CreateProjectPopoverPresenter(object):
     
     def __init__(self, model, view):
         self.model = model

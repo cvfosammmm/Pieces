@@ -22,7 +22,7 @@ class EntrybarPresenter(object):
         self.entrybar = entrybar
         self.view = view
         self.entrybar.register_observer(self)
-        self.view.todolist_popover.list.set_sort_func(self.sort_func)
+        self.view.project_popover.list.set_sort_func(self.sort_func)
 
         self.view.submit_button.set_sensitive(False)
 
@@ -37,19 +37,19 @@ class EntrybarPresenter(object):
                 self.view.overlay_text.hide()
 
         if change_code == 'todolist_changed':
-            self.view.todolist_button_label.set_text(parameter.get_title())
+            self.view.project_button_label.set_text(parameter.get_title())
 
         if change_code == 'todolist_title_changed':
-            self.view.todolist_button_label.set_text(self.entrybar.todolist.get_title())
+            self.view.project_button_label.set_text(self.entrybar.todolist.get_title())
 
         if change_code == 'validation_state_changed':
             self.view.submit_button.set_sensitive(parameter)
 
         if change_code == 'new_todolist':
-            self.view.todolist_popover.list.prepend(parameter.entrybar_selection_entry.view)
+            self.view.project_popover.list.prepend(parameter.entrybar_selection_entry.view)
 
         if change_code == 'todolist_removed':
-            self.view.todolist_popover.list.remove(parameter.entrybar_selection_entry.view)
+            self.view.project_popover.list.remove(parameter.entrybar_selection_entry.view)
 
     def sort_func(self, row1, row2):
         if row1.todolist.last_modified > row2.todolist.last_modified: return -1

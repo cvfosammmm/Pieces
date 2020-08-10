@@ -27,8 +27,8 @@ class WorkspacePresenter(object):
         self.workspace.register_observer(self)
         self.main_window.sidebar_paned.set_position(self.workspace.sidebar_position)
 
-        self.main_window.delete_todolist_action.set_enabled(False)
-        self.main_window.rename_todolist_action.set_enabled(False)
+        self.main_window.delete_project_action.set_enabled(False)
+        self.main_window.rename_project_action.set_enabled(False)
 
         for todolist in self.workspace.todolists:
             self.main_window.notebook.append_page(todolist.view)
@@ -65,14 +65,14 @@ class WorkspacePresenter(object):
         page_number = self.main_window.notebook.page_num(todolist.view)
         todolist.view.get_vadjustment().set_value(0)
         self.main_window.notebook.set_current_page(page_number)
-        self.main_window.delete_todolist_action.set_enabled(True)
-        self.main_window.rename_todolist_action.set_enabled(True)
+        self.main_window.delete_project_action.set_enabled(True)
+        self.main_window.rename_project_action.set_enabled(True)
         self.main_window.entrybar.show_all()
         self.main_window.entrybar.text_entry.grab_focus()
 
     def show_welcome_page(self):
-        self.main_window.delete_todolist_action.set_enabled(False)
-        self.main_window.rename_todolist_action.set_enabled(False)
+        self.main_window.delete_project_action.set_enabled(False)
+        self.main_window.rename_project_action.set_enabled(False)
         self.main_window.entrybar.hide()
 
 

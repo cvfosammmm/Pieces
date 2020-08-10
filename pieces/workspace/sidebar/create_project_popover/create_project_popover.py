@@ -15,13 +15,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>
 
-import pieces.workspace.sidebar.create_todolist_popover.create_todolist_popover_controller as create_todolist_popover_controller
-import pieces.workspace.sidebar.create_todolist_popover.create_todolist_popover_presenter as create_todolist_popover_presenter
+import pieces.workspace.sidebar.create_project_popover.create_project_popover_controller as create_project_popover_controller
+import pieces.workspace.sidebar.create_project_popover.create_project_popover_presenter as create_project_popover_presenter
 from pieces.helpers.observable import Observable
 from pieces.app.service_locator import ServiceLocator
 
 
-class CreateTodolistPopover(Observable):
+class CreateProjectPopover(Observable):
 
     def __init__(self, workspace):
         Observable.__init__(self)
@@ -32,9 +32,9 @@ class CreateTodolistPopover(Observable):
 
         self.validation_state = False
 
-        self.view = ServiceLocator.get_main_window().sidebar.create_todolist_popover
-        self.controller = create_todolist_popover_controller.CreateTodolistPopoverController(self, self.view)
-        self.presenter = create_todolist_popover_presenter.CreateTodolistPopoverPresenter(self, self.view)
+        self.view = ServiceLocator.get_main_window().sidebar.create_project_popover
+        self.controller = create_project_popover_controller.CreateProjectPopoverController(self, self.view)
+        self.presenter = create_project_popover_presenter.CreateProjectPopoverPresenter(self, self.view)
 
     def set_title(self, title, notify=False):
         self.title = title

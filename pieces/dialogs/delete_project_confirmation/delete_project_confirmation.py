@@ -23,7 +23,7 @@ from gi.repository import Gtk
 from pieces.dialogs.dialog import Dialog
 
 
-class DeleteTodolistConfirmationDialog(Dialog):
+class DeleteProjectConfirmationDialog(Dialog):
 
     def __init__(self, main_window):
         self.main_window = main_window

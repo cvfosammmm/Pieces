@@ -16,7 +16,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>
 
 
-class CreateTodolistPopoverController(object):
+class CreateProjectPopoverController(object):
     
     def __init__(self, model, view):
         self.model = model

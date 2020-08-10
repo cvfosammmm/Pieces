@@ -21,17 +21,17 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 from pieces.dialogs.dialog import Dialog
-import pieces.dialogs.rename_todolist.rename_todolist_viewgtk as view
+import pieces.dialogs.rename_project.rename_project_viewgtk as view
 
 
-class RenameTodolistDialog(Dialog):
+class RenameProjectDialog(Dialog):
 
     def __init__(self, main_window):
         self.main_window = main_window
         self.current_values = dict()
         self.validation_state = False
 
-        self.view = view.RenameTodolistDialogView(self.main_window)
+        self.view = view.RenameProjectDialogView(self.main_window)
         self.view.title_entry.connect('activate', self.on_title_entry_activate)
         self.view.title_entry.connect('changed', self.on_title_entry_changed)
 

@@ -36,17 +36,17 @@ class EntrybarView(Gtk.HBox):
         self.overlay_text.get_style_context().add_class('placeholder-text')
         self.overlay_text.set_margin_left(9)
 
-        self.todolist_button = Gtk.MenuButton()
-        self.todolist_button.set_can_focus(False)
-        self.todolist_button_label = Gtk.Label()
-        self.todolist_button_label.set_max_width_chars(10)
-        self.todolist_button_label.set_size_request(100, -1)
-        self.todolist_button_label.set_xalign(0)
-        self.todolist_button_label.set_ellipsize(Pango.EllipsizeMode.END)
-        self.todolist_button.add(self.todolist_button_label)
+        self.project_button = Gtk.MenuButton()
+        self.project_button.set_can_focus(False)
+        self.project_button_label = Gtk.Label()
+        self.project_button_label.set_max_width_chars(10)
+        self.project_button_label.set_size_request(100, -1)
+        self.project_button_label.set_xalign(0)
+        self.project_button_label.set_ellipsize(Pango.EllipsizeMode.END)
+        self.project_button.add(self.project_button_label)
 
-        self.todolist_popover = EntrybarTodolistPopoverView()
-        self.todolist_button.set_popover(self.todolist_popover)
+        self.project_popover = EntrybarProjectPopoverView()
+        self.project_button.set_popover(self.project_popover)
 
         self.placeholder_overlay = Gtk.Overlay()
         self.placeholder_overlay.add(self.text_entry)
@@ -56,7 +56,7 @@ class EntrybarView(Gtk.HBox):
         box = Gtk.HBox()
         box.get_style_context().add_class('linked')
         box.pack_start(self.placeholder_overlay, True, True, 0)
-        box.pack_start(self.todolist_button, False, False, 0)
+        box.pack_start(self.project_button, False, False, 0)
         box.set_margin_right(6)
 
         self.submit_button = Gtk.Button.new_from_icon_name('keyboard-enter-symbolic', Gtk.IconSize.BUTTON)
@@ -67,11 +67,11 @@ class EntrybarView(Gtk.HBox):
         self.pack_start(self.submit_button, False, False, 0)
 
 
-class EntrybarTodolistPopoverView(Gtk.Popover):
+class EntrybarProjectPopoverView(Gtk.Popover):
 
     def __init__(self):
         Gtk.Popover.__init__(self)
-        self.get_style_context().add_class('entrybar-todolist-popover')
+        self.get_style_context().add_class('entrybar-project-popover')
 
         self.list = Gtk.ListBox()
         self.list.set_can_focus(False)

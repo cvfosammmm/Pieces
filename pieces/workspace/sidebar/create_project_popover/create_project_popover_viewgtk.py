@@ -20,7 +20,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 
-class CreateTodolistPopoverView(Gtk.Popover):
+class CreateProjectPopoverView(Gtk.Popover):
 
     def __init__(self):
         Gtk.Popover.__init__(self)

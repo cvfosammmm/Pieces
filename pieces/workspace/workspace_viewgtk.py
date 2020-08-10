@@ -86,14 +86,14 @@ class MainWindow(Gtk.ApplicationWindow):
         self.style_context.add_provider_for_screen(self.get_screen(), self.css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
 
         # actions
-        self.new_todolist_action = Gio.SimpleAction.new('new-todolist', None)
-        self.add_action(self.new_todolist_action)
+        self.new_project_action = Gio.SimpleAction.new('new-project', None)
+        self.add_action(self.new_project_action)
 
-        self.rename_todolist_action = Gio.SimpleAction.new('rename-todolist', None)
-        self.add_action(self.rename_todolist_action)
+        self.rename_project_action = Gio.SimpleAction.new('rename-project', None)
+        self.add_action(self.rename_project_action)
 
-        self.delete_todolist_action = Gio.SimpleAction.new('delete-todolist', None)
-        self.add_action(self.delete_todolist_action)
+        self.delete_project_action = Gio.SimpleAction.new('delete-project', None)
+        self.add_action(self.delete_project_action)
 
         self.shortcuts_window_action = Gio.SimpleAction.new('show-shortcuts-window', None)
         self.add_action(self.shortcuts_window_action)

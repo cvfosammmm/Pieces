@@ -89,16 +89,16 @@ box.entrybar entry {
     border-bottom-right-radius: 0px;
     border-right-width: 0px;
 }
-popover.entrybar-todolist-popover {
+popover.entrybar-project-popover {
     padding: 2px 0px;
 }
-popover.entrybar-todolist-popover list {
+popover.entrybar-project-popover list {
     background: @theme_bg_color;
 }
-popover.entrybar-todolist-popover list row.selected {
+popover.entrybar-project-popover list row.selected {
     font-weight: bold;
 }
-popover.entrybar-todolist-popover list row {
+popover.entrybar-project-popover list row {
     border-radius: 4px;
     padding: 4px 6px;
 }
