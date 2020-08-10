@@ -31,9 +31,9 @@ class KeyboardShortcutsDialog(Dialog):
 
         data = list()
 
-        section = {'title': _('Lists'), 'items': list()}
-        section['items'].append({'title': _('Create new list'), 'shortcut': '&lt;ctrl&gt;N'})
-        section['items'].append({'title': _('Rename list'), 'shortcut': 'F2'})
+        section = {'title': _('Projects'), 'items': list()}
+        section['items'].append({'title': _('Create new project'), 'shortcut': '&lt;ctrl&gt;N'})
+        section['items'].append({'title': _('Rename project'), 'shortcut': 'F2'})
         data.append(section)
 
         section = {'title': _('Windows and Panels'), 'items': list()}

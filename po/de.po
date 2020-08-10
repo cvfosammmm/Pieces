@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pieces\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 12:47+0200\n"
-"PO-Revision-Date: 2020-08-10 12:47+0200\n"
+"POT-Creation-Date: 2020-08-10 14:14+0200\n"
+"PO-Revision-Date: 2020-08-10 14:14+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -40,20 +40,21 @@ msgid "_Cancel"
 msgstr "_Abbrechen"
 
 #: pieces/dialogs/delete_todolist_confirmation/delete_todolist_confirmation.py:52
-msgid "_Yes, delete this list"
-msgstr "_Ja, Liste löschen"
+msgid "_Yes, delete this project"
+msgstr "_Ja, Projekt löschen"
 
 #: pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py:34
-msgid "Lists"
-msgstr "Listen"
+#: pieces/workspace/sidebar/sidebar_viewgtk.py:39
+msgid "Projects"
+msgstr "Projekte"
 
 #: pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py:35
-msgid "Create new list"
-msgstr "Neue Liste erstellen"
+msgid "Create new project"
+msgstr "Projekt erstellen"
 
 #: pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py:36
-msgid "Rename list"
-msgstr "Liste umbenennen"
+msgid "Rename project"
+msgstr "Projekt umbenennen"
 
 #: pieces/dialogs/keyboard_shortcuts/keyboard_shortcuts.py:39
 msgid "Windows and Panels"
@@ -90,13 +91,12 @@ msgid "Data folder:"
 msgstr "Verzeichnis:"
 
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:46
-#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
 msgid "List Name"
 msgstr "Name der Liste"
 
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:63
-msgid "Rename List"
-msgstr "Liste umbenennen"
+msgid "Rename Project"
+msgstr "Projekt umbenennen"
 
 #: pieces/dialogs/rename_todolist/rename_todolist_viewgtk.py:68
 msgid "_Rename"
@@ -107,16 +107,16 @@ msgid "Add a task..."
 msgstr "Aufgabe hinzufügen..."
 
 #: pieces/workspace/entrybar/entrybar_viewgtk.py:63
-msgid "Add Item"
-msgstr "Hinzufügen"
+msgid "Add Task"
+msgstr "Aufgabe hinzufügen"
 
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:69
-msgid "Rename list..."
-msgstr "Liste umbenennen..."
+msgid "Rename project..."
+msgstr "Projekt umbenennen..."
 
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:70
-msgid "Delete list..."
-msgstr "Liste löschen..."
+msgid "Delete project..."
+msgstr "Projekt löschen..."
 
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:72
 #: pieces/workspace/headerbar/headerbar_viewgtk.py:86
@@ -143,31 +143,54 @@ msgstr "Strg"
 msgid "Dark Mode"
 msgstr "Nachtmodus"
 
+#: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:34
+msgid "Project Name"
+msgstr "Name des Projekts"
+
 #: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:44
 msgid "Cancel"
 msgstr "Abbrechen"
 
 #: pieces/workspace/sidebar/create_todolist_popover/create_todolist_popover_viewgtk.py:46
-msgid "Create List"
-msgstr "Liste erstellen"
+msgid "Create Project"
+msgstr "Projekt erstellen"
 
-#: pieces/workspace/sidebar/sidebar_viewgtk.py:50
-msgid "New List"
-msgstr "Neue Liste"
+#: pieces/workspace/sidebar/sidebar_viewgtk.py:55
+msgid "New Project"
+msgstr "Neues Projekt"
 
-#: pieces/workspace/sidebar/sidebar_viewgtk.py:52
-msgid "Create List (Ctrl+N)"
-msgstr "Liste erstellen (Strg+N)"
+#: pieces/workspace/sidebar/sidebar_viewgtk.py:57
+msgid "Create Project (Ctrl+N)"
+msgstr "Projekt erstellen (Strg+N)"
 
 #: pieces/workspace/welcome_page/welcome_page_viewgtk.py:36
 msgid ""
 "Pieces is a todolist manager.\n"
 "\n"
-"To make a list, click \"New List\" in the lower left corner."
+"To make a list, click \"New Project\" in the lower left corner."
 msgstr ""
 "Pieces verwaltet To-do-Listen.\n"
 "\n"
-"Um eine Liste zu erstellen, klicken Sie bitte unten links auf \"Neue Liste\"."
+"Um eine Liste zu erstellen, klicken Sie bitte unten links auf \"Neues Projekt"
+"\"."
+
+#~ msgid "Lists"
+#~ msgstr "Listen"
+
+#~ msgid "Create new list"
+#~ msgstr "Neue Liste erstellen"
+
+#~ msgid "Rename list"
+#~ msgstr "Liste umbenennen"
+
+#~ msgid "Add Item"
+#~ msgstr "Hinzufügen"
+
+#~ msgid "Rename List"
+#~ msgstr "Liste umbenennen"
+
+#~ msgid "New List"
+#~ msgstr "Neue Liste"
 
 #~ msgid "Add List"
 #~ msgstr "Liste erstellen"

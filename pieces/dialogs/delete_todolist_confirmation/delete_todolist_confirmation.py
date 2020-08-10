@@ -49,7 +49,7 @@ class DeleteTodolistConfirmationDialog(Dialog):
         self.view.format_secondary_markup(_('Do you really want to do this?'))
 
         self.view.add_buttons(_('_Cancel'), Gtk.ResponseType.CANCEL)
-        delete_button = self.view.add_button(_('_Yes, delete this list'), Gtk.ResponseType.YES)
+        delete_button = self.view.add_button(_('_Yes, delete this project'), Gtk.ResponseType.YES)
         delete_button.get_style_context().add_class('destructive-action')
         self.view.set_default_response(Gtk.ResponseType.CANCEL)
 

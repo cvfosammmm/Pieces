@@ -66,8 +66,8 @@ class HeaderBarRight(Gtk.HeaderBar):
 
         box = Gtk.VBox()
         self.pmb.set_box_margin(box)
-        self.pmb.add_action_button(box, _('Rename list...'), 'win.rename-todolist', keyboard_shortcut='F2')
-        self.pmb.add_action_button(box, _('Delete list...'), 'win.delete-todolist')
+        self.pmb.add_action_button(box, _('Rename project...'), 'win.rename-todolist', keyboard_shortcut='F2')
+        self.pmb.add_action_button(box, _('Delete project...'), 'win.delete-todolist')
         self.pmb.add_separator(box)
         self.pmb.add_menu_button(box, _('View'), 'view')
         self.pmb.add_separator(box)

@@ -60,7 +60,7 @@ class EntrybarView(Gtk.HBox):
         box.set_margin_right(6)
 
         self.submit_button = Gtk.Button.new_from_icon_name('keyboard-enter-symbolic', Gtk.IconSize.BUTTON)
-        self.submit_button.set_tooltip_text(_('Add Item'))
+        self.submit_button.set_tooltip_text(_('Add Task'))
         self.submit_button.set_can_focus(False)
 
         self.pack_start(box, True, True, 0)

@@ -60,7 +60,7 @@ class RenameTodolistDialogView(object):
     def create_headerbar(self):
         self.headerbar = self.dialog.get_header_bar()
         self.headerbar.set_show_close_button(False)
-        self.headerbar.set_title(_('Rename List'))
+        self.headerbar.set_title(_('Rename Project'))
 
         self.cancel_button = self.dialog.add_button(_('_Cancel'), Gtk.ResponseType.CANCEL)
         self.cancel_button.set_can_focus(False)
