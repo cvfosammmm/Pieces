@@ -23,12 +23,11 @@ This way is probably a bit faster and may save you some disk space. I develop Pi
 
 3. cd to Pieces folder
 
-4. Run meson: `meson builddir`
+4. Run meson: `meson builddir`<br />
+Note: Some distributions may not include systemwide installations of Python modules which aren't installed from distribution packages. In this case, you want to install Pieces in your home directory with `meson builddir --prefix=~/.local`.
 
 5. Install Pieces with: `ninja install -C builddir`<br />
 Or run it locally: `./scripts/pieces.dev`
-
-Note: Some distributions may not include systemwide installations of Python modules which aren't installed from distribution packages. In this case, you want to install Pieces in your home directory with `meson builddir --prefix=~/.local`.
 
 ## Getting in touch
 
